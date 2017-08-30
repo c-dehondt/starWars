@@ -1,21 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MyNewServiceService } from './my-new-service.service';
+import { TestBed, inject } from '@angular/core/testing';
 
 // New imports to update based on AngularFire2 version 4
-import { FormsModule} from '@angular/forms';
 import{HttpModule} from '@angular/http';
+import { MyNewDetailleComponent } from './my-new-detaille/my-new-detaille.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyNewDetailleComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MyNewServiceService],
   bootstrap: [AppComponent]
 })
 
