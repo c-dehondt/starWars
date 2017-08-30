@@ -1,24 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container justify-content-center">
-  <h1 class="">
-    Welcome to {{title}}!
-  </h1>
-  <img class="" width="500" src="./assets/starwars.png">
-</div>
 
-<section class="container row">
-  <button  class="btn btn-warning" value="" *ngFor="let selection of mynewservice.results" (click)="this.mynewservice.selectCat(selection)">{{selection}}
-  </button>
-  <h2 class="col-10">Here are some links to help you start: </h2>
-<div class="col-4">
-  <ul class="list-group">
-    <li class="list-group-item list-group-item-action" *ngFor="let detaille of mynewservice.info" (click)="this.mynewservice.detailleCat(detaille['url'])">{{detaille[mynewservice.infoNom]}}
-    </li>
-  </ul>
-</div>
-<app-my-new-detaille></app-my-new-detaille>
-</section>
-<!-- <div style="display:inline-block, text-align:right">
-  <div *ngFor="let detailleInfo of mynewservice.descriptionTab">{{detailleInfo}}
-  </div>
-</div> -->
+  <header class="container text-center">
+    <h1 class="">
+      Welcome to {{title}}
+    </h1>
+    <img class="" src="./assets/starwars.png">
+</header>
+
+<main class="container text-center">
+    <button  class="btn btn-warning" value="" *ngFor="let selection of mynewservice.results" (click)="this.mynewservice.selectCat(selection)">{{selection}}
+    </button>
+    <h2 class="">Here are some links to help you start: </h2>
+
+    <div class="row text-left">
+      <ul class="col-md-4 list-group">
+        <li class="list-group-item list-group-item-action" *ngFor="let detaille of mynewservice.info" (click)="this.mynewservice.detailleCat(detaille['url'])">{{detaille[mynewservice.infoNom]}}
+        </li>
+      </ul>
+      <app-my-new-detaille></app-my-new-detaille>
+    </div>
+</main>
