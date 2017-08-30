@@ -9,7 +9,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 export class MyNewServiceService {
   title = 'StarWars';
   results: string[];
-  info: any;
   infoNom: any;
 
   constructor (private http: HttpClient) {}
@@ -22,7 +21,6 @@ export class MyNewServiceService {
 
     selectCat(item){
       this.http.get('https://swapi.co/api/' + item).subscribe(data => {
-        this.info = data["results"];
         this.infoNom = Object.keys(data["results"][0])[0];
         console.table(data["results"]);
       });
