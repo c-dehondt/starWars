@@ -6,10 +6,16 @@
   <img width="500" src="./assets/starwars.png">
 </div>
 <h2>Here are some links to help you start: </h2>
-<button value="" *ngFor="let selection of mynewservice.results" (click)="mynewservice.selectCat(selection)">{{selection}}
+<button value="" *ngFor="let selection of mynewservice.results" (click)="this.mynewservice.selectCat(selection)">{{selection}}
 </button>
-<div class="">
+<div class="text-align:left">
   <ul>
-    <li *ngFor="let detaille of mynewservice.info">{{detaille[mynewservice.infoNom]}}</li>
+    <li *ngFor="let detaille of mynewservice.info" (click)="this.mynewservice.detailleCat(detaille['url'])">{{detaille[mynewservice.infoNom]}}
+    </li>
   </ul>
+</div>
+
+<div style="text-align:left">
+  <div *ngFor="let detailleInfo of mynewservice.descriptionTab">{{detailleInfo}}
+  </div>
 </div>

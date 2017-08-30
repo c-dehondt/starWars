@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { MyNewServiceService } from './my-new-service.service';
-import { TestBed, inject } from '@angular/core/testing';
 
 // New imports to update based on AngularFire2 version 4
 import{HttpModule} from '@angular/http';

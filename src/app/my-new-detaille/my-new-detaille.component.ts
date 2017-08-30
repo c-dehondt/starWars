@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit} from '@angular/core';
+import { MyNewServiceService } from '../my-new-service.service';
 
 @Component({
   selector: 'app-my-new-detaille',
@@ -8,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MyNewDetailleComponent implements OnInit {
-  constructor(private mynewservice2:MyNewDetailleComponent) {
-  this.mynewservice2.ngOnInit()
+  constructor(private mynewservice:MyNewServiceService) {
 }
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
