@@ -1,23 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
+<div class="container justify-content-center">
+  <h1 class="">
     Welcome to {{title}}!
   </h1>
-  <img width="500" src="./assets/starwars.png">
+  <img class="" width="500" src="./assets/starwars.png">
 </div>
 
-<section style="text-align:center">
-  <h2>Here are some links to help you start: </h2>
-  <button  value="" *ngFor="let selection of mynewservice.results" (click)="this.mynewservice.selectCat(selection)">{{selection}}
+<section class="container row">
+  <button  class="btn btn-warning" value="" *ngFor="let selection of mynewservice.results" (click)="this.mynewservice.selectCat(selection)">{{selection}}
   </button>
-</section>
-<div style="text-align:left, display:inline-block">
-  <ul>
-    <li *ngFor="let detaille of mynewservice.info" (click)="this.mynewservice.detailleCat(detaille['url'])">{{detaille[mynewservice.infoNom]}}
+  <h2 class="col-10">Here are some links to help you start: </h2>
+<div class="col-4">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action" *ngFor="let detaille of mynewservice.info" (click)="this.mynewservice.detailleCat(detaille['url'])">{{detaille[mynewservice.infoNom]}}
     </li>
   </ul>
 </div>
 <app-my-new-detaille></app-my-new-detaille>
+</section>
 <!-- <div style="display:inline-block, text-align:right">
   <div *ngFor="let detailleInfo of mynewservice.descriptionTab">{{detailleInfo}}
   </div>
