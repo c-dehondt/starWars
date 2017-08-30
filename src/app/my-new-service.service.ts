@@ -33,7 +33,7 @@ export class MyNewServiceService {
   detailleCat(description) {
     this.http.get(description).subscribe(data => {
     this.descriptionResults= data;
-    this.descriptionTab = Object.keys(data);
+    this.descriptionTab =Object.keys(data);
     console.table(this.descriptionTab);
     });
     }

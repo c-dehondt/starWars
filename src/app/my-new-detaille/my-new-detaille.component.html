@@ -6,16 +6,18 @@
 </div>
 </div> -->
 
-<div style="text-align:right">
-  <div *ngFor="let detailleInfo of mynewservice.descriptionTab">{{detailleInfo}}
+<!-- <div style="text-align:center">
+  <div *ngFor="let detailleInfo of mynewservice.descriptionTab">{{detailleInfo}}{{mynewservice.descriptionResults[detailleInfo]}}
   </div>
-</div>
+</div> -->
 
-<!-- <div class="">
-<table class="table">
+<div class="">
+<table style="text-align:left">
   <thead>
   </thead>
-  <tbody *ngFor="let detailleInfo of mynewservice.descriptionTab">{{detailleInfo}}
+  <tbody *ngFor="let detailleInfo of mynewservice.descriptionTab">
+  <th>{{detailleInfo}}</th>
+  <th>{{mynewservice.descriptionResults[detailleInfo]}}</th>
   </tbody>
 </table>
-</div> -->
+</div>
