@@ -1,5 +1,4 @@
 import { Component,OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {MyNewServiceService} from './my-new-service.service';
 
 
@@ -10,7 +9,7 @@ import {MyNewServiceService} from './my-new-service.service';
 })
 
 export class AppComponent implements OnInit {
-  
+
 
   constructor(private mynewservice:MyNewServiceService) {
   this.mynewservice.ngOnInit()

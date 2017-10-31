@@ -1,0 +1,7 @@
+<div class="row text-left list-group">
+  <ul class="col-md-4 ">
+    <li  *ngFor="let detaille of mynewservice.info" (click)="this.mynewservice.detailleCat(detaille['url'])"><a [routerLink]="['/accueil',mynewservice.categorieName, detaille[mynewservice.infoNom]]" class="list-group-item list-group-item-action list-group-item-light">{{detaille[mynewservice.infoNom]}}</a>
+    </li>
+  </ul>
+  <!-- <app-my-new-detaille></app-my-new-detaille> -->
+</div>

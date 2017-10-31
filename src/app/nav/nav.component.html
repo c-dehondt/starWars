@@ -1,0 +1,14 @@
+
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ">
+      <li id="li" class="nav-item active" *ngFor="let selection of mynewservice.results" (click)="this.mynewservice.selectCat(selection)">
+        <a [routerLink]="['/accueil',selection]" class="nav-link">{{selection}}</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+    <h2 class="">Here are some links to help you start: </h2>
